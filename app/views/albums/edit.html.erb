@@ -1,0 +1,11 @@
+<%= form_tag album_path(@album.id), method: :get, class: "navbar-form navbar-left search-form" do %>
+  <%= label_tag "id" %>
+  <%= text_field_tag "album[id]", @album.id %>
+  <%= label_tag "title" %>
+  <%= text_field_tag "album[title]", @album.title %>
+  <%= label_tag "year" %>
+  <%= text_field_tag "album[year]", @album.year %>
+  <%= label_tag "artist_id" %>
+  <%= text_field_tag "album[artist_id]", @album.artist_id %>
+  <%= submit_tag "Submit" %>
+<% end %>

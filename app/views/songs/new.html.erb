@@ -1,0 +1,11 @@
+<%= form_tag songs_path, method: :post do %>
+  <%= label_tag "title" %>
+  <%= text_field_tag "song[title]" %>
+  <%= label_tag "time" %>
+  <%= text_field_tag "song[time]" %>
+  <%= label_tag "artist_id" %>
+  <%= text_field_tag "song[artist_id]" %>
+  <%= label_tag "album_id" %>
+  <%= text_field_tag "song[album_id]" %>
+  <%= submit_tag "Submit" %>
+<% end %>

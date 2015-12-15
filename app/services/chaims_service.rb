@@ -18,7 +18,7 @@ class ChaimsService
   end
 
   def create_song(data)
-    parse(connection.post("songs?#{data}"))
+    parse(connection.post("songs",data))
   end
 
   def update_song(id, data)
@@ -58,7 +58,7 @@ class ChaimsService
   end
 
   def create_album(data)
-    parse(connection.post("albums?#{data}"))
+    parse(connection.post("albums", data))
   end
 
   def update_album(id, data)

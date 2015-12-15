@@ -5,14 +5,15 @@ class AlbumsController < ApplicationController
     end
 
     def index
-      @album = Album.all
+      @albums = Album.all
     end
 
     def edit
+      @album = Album.find(params[:id])
     end
 
     def update
-      Album.update(params[:id], params)
+      Album.update(params[:id], params[:album])
 
       redirect_to album_path(params[:id])
     end
@@ -21,7 +22,7 @@ class AlbumsController < ApplicationController
     end
 
     def create
-      @album = Album.create(params)
+      @album = Album.create(params[:album])
 
       redirect_to album_path(@album.id)
     end

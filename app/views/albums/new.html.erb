@@ -1,0 +1,9 @@
+<%= form_tag albums_path, method: :post do %>
+  <%= label_tag "title" %>
+  <%= text_field_tag "album[title]" %>
+  <%= label_tag "year" %>
+  <%= text_field_tag "album[year]" %>
+  <%= label_tag "artist_Id" %>
+  <%= text_field_tag "album[artist_id]" %>
+  <%= submit_tag "Submit" %>
+<% end %>

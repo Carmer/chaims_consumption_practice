@@ -1,0 +1,5 @@
+<ol>
+  <%= @songs.each do |song| %>
+    <li><%= song.title %> - <%= song.time %> - <%= song.artist_id %> - <%= song.album_id %></li>
+  <% end %>
+</ol>
