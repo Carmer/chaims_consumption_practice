@@ -1,1 +1,1 @@
-# Hand Rolled Api example for [MyChaims](my-chaims.herokuapp.com)
+# Hand Rolled Api example for [MyChaims](http://my-chaims.herokuapp.com)
