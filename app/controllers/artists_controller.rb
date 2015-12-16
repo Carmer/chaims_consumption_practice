@@ -5,7 +5,7 @@ class ArtistsController < ApplicationController
     end
 
     def index
-      @artist = Artist.all
+      @artists = Artist.all
     end
 
     def edit
@@ -15,7 +15,7 @@ class ArtistsController < ApplicationController
     def update
       Artist.update(params[:id], params[:artist])
 
-      redirect_to Artist_path(params[:id])
+      redirect_to artist_path(params[:id])
     end
 
     def new

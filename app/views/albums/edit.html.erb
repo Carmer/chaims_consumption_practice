@@ -1,4 +1,4 @@
-<%= form_tag album_path(@album.id), method: :get, class: "navbar-form navbar-left search-form" do %>
+<%= form_tag album_path(@album.id), method: :patch, class: "navbar-form navbar-left search-form" do %>
   <%= label_tag "id" %>
   <%= text_field_tag "album[id]", @album.id %>
   <%= label_tag "title" %>

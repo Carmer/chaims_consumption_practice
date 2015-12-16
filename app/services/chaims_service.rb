@@ -6,7 +6,7 @@ class ChaimsService
   end
 
   def complete_info(song_id)
-    parse(connection("complete_info/#{song_id}"))
+    parse(connection.get("complete_info/#{song_id}"))
   end
 
   def songs
@@ -22,7 +22,7 @@ class ChaimsService
   end
 
   def update_song(id, data)
-    parse(connection.patch("songs/#{id}?#{data}"))
+    parse(connection.patch("songs/#{id}", data))
   end
 
   def destroy_song(id)
@@ -38,11 +38,11 @@ class ChaimsService
   end
 
   def create_artist(data)
-    parse(connection.post("artists?#{data}"))
+    parse(connection.post("artists", data))
   end
 
   def update_artist(id, data)
-    parse(connection.patch("artists/#{id}?#{data}"))
+    parse(connection.patch("artists/#{id}", data))
   end
 
   def destroy_artist(id)
@@ -62,7 +62,7 @@ class ChaimsService
   end
 
   def update_album(id, data)
-    parse(connection.patch("albums/#{id}?#{data}"))
+    parse(connection.patch("albums/#{id}", data))
   end
 
   def destroy_album(id)

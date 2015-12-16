@@ -1,7 +1,7 @@
-<%= form_tag artist_path(@artist.id), method: :get, class: "navbar-form navbar-left search-form" do %>
+<%= form_tag artist_path(@artist.id), method: :patch, class: "navbar-form navbar-left search-form" do %>
   <%= label_tag "id" %>
   <%= text_field_tag "artist[id]", @artist.id %>
-  <%= label_tag "title" %>
-  <%= text_field_tag "artist[title]", @artist.name %>
+  <%= label_tag "name" %>
+  <%= text_field_tag "artist[name]", @artist.name %>
   <%= submit_tag "Submit" %>
 <% end %>

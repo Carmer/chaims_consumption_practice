@@ -1,10 +1,8 @@
-<%= form_tag song_path(@song.id), method: :get, class: "navbar-form navbar-left search-form" do %>
+<%= form_tag song_path(@song.id), method: :patch do %>
   <%= label_tag "id" %>
   <%= text_field_tag "song[id]", @song.id %>
   <%= label_tag "title" %>
   <%= text_field_tag "song[title]", @song.title %>
-  <%= label_tag "time" %>
-  <%= text_field_tag "song[time]", @song.time %>
   <%= label_tag "artist_Id" %>
   <%= text_field_tag "song[artist_id]", @song.artist_id %>
   <%= label_tag "album_Id" %>
